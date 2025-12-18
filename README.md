@@ -1,2 +1,0 @@
-# ux-zadanie
-my task 
