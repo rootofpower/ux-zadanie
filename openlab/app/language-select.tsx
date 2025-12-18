@@ -81,12 +81,12 @@ export default function LanguageSelectScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        {/* Back Button */}
-        <View style={styles.header}>
-          <BackButton />
-        </View>
+      {/* Back Button */}
+      <View style={styles.header}>
+        <BackButton />
+      </View>
 
+      <View style={styles.content}>
         {/* Title Section */}
         <View style={styles.titleSection}>
           <Text style={styles.title}>Choose Your Language</Text>
@@ -162,12 +162,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
+  header: {
+    paddingTop: 12,
+    paddingHorizontal: 20,
+    alignItems: 'flex-start',
+  },
   content: {
     flex: 1,
     paddingHorizontal: 40,
-  },
-  header: {
-    paddingTop: 12,
   },
   titleSection: {
     alignItems: 'center',

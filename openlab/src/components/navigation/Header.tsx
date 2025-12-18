@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingVertical: 12,
-    height: 56,
+    paddingVertical: 16,
+    minHeight: 64,
   },
   iconButton: {
     width: 28,
@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'visible',
   },
   title: {
     fontFamily: typography.fontFamily.medium,

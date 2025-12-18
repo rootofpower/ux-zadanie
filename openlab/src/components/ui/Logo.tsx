@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
-  const fontSize = size === 'small' ? 24 : size === 'medium' ? 36 : 48;
+  const fontSize = size === 'small' ? 24 : size === 'medium' ? 32 : 44;
 
   return (
     <View style={styles.container}>
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingVertical: 8,
   },
   text: {
     fontFamily: typography.fontFamily.bold,

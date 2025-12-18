@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { colors, typography } from '../../constants';
+import { View, StyleSheet, Image } from 'react-native';
+import { colors } from '../../constants';
 
 interface AvatarProps {
   size?: number;
@@ -24,21 +23,15 @@ export const Avatar: React.FC<AvatarProps> = ({
         showShadow && styles.shadow,
       ]}
     >
-      <LinearGradient
-        colors={[colors.primary, colors.primaryLight, '#FF6B9D']}
-        style={[
-          styles.gradient,
-          {
-            width: size,
-            height: size,
-            borderRadius: size * 0.25,
-          },
-        ]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-      >
-        <Text style={[styles.text, { fontSize: size * 0.35 }]}>OLA</Text>
-      </LinearGradient>
+      <Image
+        source={require('../../../assets/image.png')}
+        style={{
+          width: size,
+          height: size,
+          borderRadius: size * 0.25,
+        }}
+        resizeMode="cover"
+      />
     </View>
   );
 };
@@ -53,14 +46,5 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 8,
-  },
-  gradient: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontFamily: typography.fontFamily.bold,
-    color: colors.textPrimary,
-    letterSpacing: 2,
   },
 });
